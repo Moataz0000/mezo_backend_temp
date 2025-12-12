@@ -13,5 +13,8 @@ dependencies = [
 
 
 target-version = "py314"
+
 [tool.black]
 target-version = ["py314"]
+[tool.isort]
+profile = "black"
