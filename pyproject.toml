@@ -18,3 +18,8 @@ target-version = "py314"
 target-version = ["py314"]
 [tool.isort]
 profile = "black"
+
+
+[tool.ruff]
+select = []
+ignore = []
