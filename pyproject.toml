@@ -15,11 +15,13 @@ dependencies = [
 target-version = "py314"
 
 [tool.black]
-target-version = ["py314"]
+target-version = ["py313"]
 [tool.isort]
 profile = "black"
 
 
 [tool.ruff]
+
+[tool.ruff.lint]
 select = []
 ignore = []
