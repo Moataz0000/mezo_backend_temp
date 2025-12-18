@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [BASE_DIR / "assets" / "templates"],
-        "APP_DIRS": False,
+        "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.request",
@@ -115,12 +115,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "assets/static"),)
-STATIC_ROOT = os.path.join(BASE_DIR, "assets/staticfiles")
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "assets" / "static"]
+STATIC_ROOT = BASE_DIR / "assets" / "staticfiles"
 
 # Media files
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "assets/mediafiles")
+MEDIA_ROOT = BASE_DIR / "assets" / "mediafiles"
 
+
+# User model
 AUTH_USER_MODEL = "users.User"
