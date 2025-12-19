@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: mezo_backend
+    ports:
+      - 8000:8000
+    volumes:
+      - ./config:/backend /config
+    env_file:
+      - ./config/.env
