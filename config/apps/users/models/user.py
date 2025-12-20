@@ -12,9 +12,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     is_active = models.BooleanField(default=True, verbose_name=_("Is Active Account"))
     is_staff = models.BooleanField(default=False, verbose_name=_("Is Admin Staff"))
-    is_super_admin = models.BooleanField(
-        default=False, verbose_name=_("Is Super Admin")
-    )
 
     objects = CustomUserManager()
 
