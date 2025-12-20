@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 DJANGO_PACKAGES = [
     "rest_framework",
     "django_extensions",
+    "debug_toolbar",
 ]
 
 DJANGO_APPS = [
@@ -44,6 +45,7 @@ INSTALLED_APPS += DJANGO_PACKAGES + DJANGO_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -145,3 +147,7 @@ MEDIA_ROOT = BASE_DIR / "assets" / "mediafiles"
 
 # User model
 AUTH_USER_MODEL = "users.User"
+
+
+from .integrations.debug_toolbar import DEBUG_TOOLBAR_CONFIG, INTERNAL_IPS  # noqa: E402
+from .integrations.drf import REST_FRAMEWORK  # noqa: E402
