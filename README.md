@@ -43,8 +43,8 @@ A Django REST API backend template with Docker and PostgreSQL.
    DJANGO_SUPERUSER_PASSWORD=your-password
 
    POSTGRES_DB=mydatabase
-   POSTGRES_USER=mezo
-   POSTGRES_PASSWORD=mezo123
+   POSTGRES_USER=your-db-user
+   POSTGRES_PASSWORD=your-db-password
    DB_HOST=db
    DB_PORT=5432
    ```
