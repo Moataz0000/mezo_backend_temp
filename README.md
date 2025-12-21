@@ -87,7 +87,14 @@ A Django REST API backend template with Docker and PostgreSQL.
 
 ## Features
 
-- Custom User model (email-based)
-- Django REST Framework ready
-- Docker containerization
+- Django 6.0 + Django REST Framework
+- PostgreSQL 17 database
+- Docker & Docker Compose setup
+- UV package manager (fast & modern)
 - Pre-commit hooks for code quality
+- Actions to check the PRs
+- Just commands for common tasks
+- Custom User model (Flixable)
+- Background Tasks
+- Assets & template configurations
+- Debugging Toolbar
