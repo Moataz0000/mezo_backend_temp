@@ -60,3 +60,6 @@ down:
 
 logs:
     docker-compose logs -f
+
+no-cacha
+    docker compose build --no-cache
