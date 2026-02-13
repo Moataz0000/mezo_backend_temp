@@ -6,8 +6,10 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.0",
+    "django-admin-env-badge>=0.1.1",
     "django-debug-toolbar>=6.1.0",
     "django-extensions>=4.1",
+    "django-tasks>=0.10.0",
     "djangorestframework>=3.16.1",
     "pillow>=12.0.0",
     "pre-commit>=4.5.0",

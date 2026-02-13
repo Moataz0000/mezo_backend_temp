@@ -35,6 +35,8 @@ DJANGO_PACKAGES = [
     "rest_framework",
     "django_extensions",
     "debug_toolbar",
+    "django_tasks",
+    "django_tasks.backends.database",
 ]
 
 DJANGO_APPS = [
@@ -147,6 +149,28 @@ MEDIA_ROOT = BASE_DIR / "assets" / "mediafiles"
 
 # User model
 AUTH_USER_MODEL = "users.User"
+
+
+# Cache
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "cache_table",
+        "TIMEOUT": 300,
+        "OPTIONS": {
+            "MAX_ENTRIES": 10000,
+            "CULL_FREQUENCY": 3,
+        },
+    }
+}
+
+
+# Django Background Tasks
+TASKS = {
+    "default": {
+        "BACKEND": "django_tasks.backends.database.DatabaseBackend",
+    }
+}
 
 
 from .integrations.debug_toolbar import DEBUG_TOOLBAR_CONFIG, INTERNAL_IPS  # noqa: E402
